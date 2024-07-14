@@ -3,3 +3,6 @@ from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanen
 
 def index(request):
     return render(request, "main/index.html")
+
+def products(request):
+    return render(request, "main/products.html")

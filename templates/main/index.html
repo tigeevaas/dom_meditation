@@ -1,5 +1,208 @@
 {% extends "base.html" %}
+{% block head %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'js/index.js' %}">
+{% endblock head %}
+
+
 
 {% block content %}
-<p>Text</p>
+
+<!--Main info-->
+
+<div class="container" id="firstblock">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div id="info" class="col">
+      <h1>Откройте двери Дома Медитаций</h1>
+       <p>
+          Lorem ipsum dolor sit amet consectetur. Urna nulla viverra cursus quam. Ut ipsum mattis tortor tellus. At ipsum risus sit arcu ultrices turpis ac metus. Mattis in mauris maecenas amet arcu volutpat gravida vulputate.
+       </p>
+        <button type="button" id="button" class="btn btn-primary">Присоединиться</button>
+    </div>
+    <div class="col">
+      <img class="img-fluid" src="{% static 'images/nat_1.png' %}" width="600px">
+    </div>
+  </div>
+  </div>
+
+
+<div style="background-color: #F0F0F0">
+<div class="container">
+  <div class="row h-100 justify-content-center align-items-center">
+    <h2 style="font-weight: 600; margin-top: 50px">Найдите то, что подходит Вам</h2>
+  <div id="carouselExampleCaptions" class="carousel carousel-dark slide" style="margin-top: 20px" data-bs-ride="false" >
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     <div class="card-group">
+      <div class="card">
+  <img src="{% static 'images/med_1.png' %}" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title" style="font-weight: 600;">Клуб ежедневной медитации</h5>
+    <a href="#" class="btn btn-primary" style="background-color: #25801D; border: #25801D">Подробнее</a>
+  </div>
+</div>
+  <div class="card">
+  <img src="{% static 'images/med_1.png' %}" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title" style="font-weight: 600;">Клуб ежедневной медитации</h5>
+    <a href="#" class="btn btn-primary" style="background-color: #25801D; border: #25801D">Подробнее</a>
+  </div>
+</div>
+  <div class="card">
+  <img src="{% static 'images/med_1.png' %}" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title" style="font-weight: 600;">Клуб ежедневной медитации</h5>
+    <a href="#" class="btn btn-primary" style="background-color: #25801D; border: #25801D">Подробнее</a>
+  </div>
+</div>
+</div>
+
+    </div>
+    <div class="carousel-item">
+<div class="card-group">
+  <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+
+    </div>
+    <div class="carousel-item">
+
+
+<div class="card-group">
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+  </div>
+  </div>
+
+
+<!--Questions-->
+
+
+    <div class=
+"container rounded h-75 m-5 p-5 text-light" style="margin-top: 30px">
+        <h2 style="color: black; font-weight: 600">Часто задаваемые вопросы</h2>
+        <div class="accordion" style="margin-top: 40px" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button"
+                        type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        What is GeeksforGeeks used for?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>GeeksforGeeks</strong>
+                        is a leading platform that provides computer science resources
+                        and coding challenges for programmers and technology enthusiasts,
+                        along with interview and exam preparations for upcoming aspirants.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                        Who is the founder of GeeksforGeeks?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>
+                            Sandeep Jain is the founder at GeeksforGeeks.
+                        </strong>
+                        He is an alumini of Indian Institute of Technology Roorkee.
+                        His platform GeeksforGeeks is well recognized among all the
+                        engineering students throughout all colleges in India.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed"
+                        type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false"
+                        aria-controls="collapseThree">
+                        When was GeeksforGeeks created?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>
+                            GeeksForGeeks was founded in 2009.
+                        </strong>
+                        Where is the global headquarters of GeeksForGeeks?
+                        Global headquarters for GeeksForGeeks is located in Noida,
+                        Uttar Pradesh,India.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 {% endblock content %}
