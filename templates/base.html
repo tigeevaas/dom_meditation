@@ -2,62 +2,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  {% block head %}{% endblock head %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    {% block head %}{% endblock head %}
     <title>{% block title %}{% endblock %}</title>
     {% load django_bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
-    }
-    a {
-      text-decoration: None;
-    }
-  </style>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
+
+        a {
+            text-decoration: None;
+        }
+    </style>
 
 </head>
 <body>
 <!-- NavBar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="{% static 'images/logo.png' %}" width="60px">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Главная</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="products/">Товары</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">Клуб ежедневной медитации</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Медитации и практикумы
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item" href="#">Практикумы</a></li>
-            <li><a class="dropdown-item" href="#">Исцеляющие медитации</a></li>
-            <li><a class="dropdown-item" href="#">Терапевтические эфиры</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Блог</a>
-        </li>
-      </ul>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'images/logo.png' %}" width="60px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'products' %}">Товары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'club' %}">Клуб ежедневной медитации</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Медитации и практикумы
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="#">Практикумы</a></li>
+                        <li><a class="dropdown-item" href="#">Исцеляющие медитации</a></li>
+                        <li><a class="dropdown-item" href="#">Терапевтические эфиры</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Блог</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 <!-- NavBar -->
 
@@ -69,116 +73,116 @@
 
 
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Присоединяйтесь к Дому медитаций в социальных сетях</span>
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+            <span>Присоединяйтесь к Дому медитаций в социальных сетях</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+            <a href="" class="me-4 text-reset">
+                <img src="{% static 'images/telegram_icon.png' %}" width="20px">
+            </a>
+            <a href="" class="me-4 text-reset">
+                <img src="{% static 'images/youtube_icon.png' %}" width="40px">
+            </a>
+            <a href="" class="me-4 text-reset">
+                <img src="{% static 'images/vk_icon.png' %}" width="25px">
+            </a>
+        </div>
+        <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>Дом медитаций
+                    </h6>
+                    <p>
+                        Here you can use rows and columns to organize your footer content. Lorem ipsum
+                        dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Навигация
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Главная</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Товары</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Клуб ежедневной медитации</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Блог</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Служба заботы</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Медитации и практикумы
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Практикумы</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Исцеляющие медитации</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Терапевтические эфиры</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Контакты</h6>
+                    <p><img src="{% static 'images/person_icon.png' %}" width="30px"></i>ИП Сечкина Наталья Ивановна</p>
+                    <p>
+                        <img src="{% static 'images/inn_icon.png' %}" width="30px">
+                        ИНН - 772015545999
+                    </p>
+                    <p>
+                        <img src="{% static 'images/phone_icon.png' %}" width="25px">
+                        8 916 188-18-87
+                    </p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Все права защищены
     </div>
-    <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <img src="{% static 'images/telegram_icon.png' %}" width="20px">
-      </a>
-      <a href="" class="me-4 text-reset">
-        <img src="{% static 'images/youtube_icon.png' %}" width="40px">
-      </a>
-      <a href="" class="me-4 text-reset">
-        <img src="{% static 'images/vk_icon.png' %}" width="25px">
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
-
-  <!-- Section: Links  -->
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Дом медитаций
-          </h6>
-          <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Навигация
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Главная</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Товары</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Клуб ежедневной медитации</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Блог</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Служба заботы</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Медитации и практикумы
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Практикумы</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Исцеляющие медитации</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Терапевтические эфиры</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Контакты</h6>
-          <p><img src="{% static 'images/person_icon.png' %}" width="30px"></i>ИП Сечкина Наталья Ивановна</p>
-          <p>
-            <img src="{% static 'images/inn_icon.png' %}" width="30px">
-            ИНН - 772015545999
-          </p>
-          <p>
-            <img src="{% static 'images/phone_icon.png' %}" width="25px">
-            8 916 188-18-87
-          </p>
-        </div>
-        <!-- Grid column -->
-      </div>
-      <!-- Grid row -->
-    </div>
-  </section>
-  <!-- Section: Links  -->
-
-  <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2024 Все права защищены
-  </div>
-  <!-- Copyright -->
+    <!-- Copyright -->
 </footer>
 <!-- Footer -->
 </body>

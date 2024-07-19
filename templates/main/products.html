@@ -2,11 +2,46 @@
 {% block head %}
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'js/index.js' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/products.css' %}">
 {% endblock head %}
 
 {% block content %}
 
+<div class="container">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col">
+            <h2>Товары</h2>
 
-{% endblock content %}
+            <!--Карточки товаров-->
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="{% static 'images/cards.png' %}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-weight: 600">Гадальные карты "Послание от
+                                Ангела-Хранителя"</h5>
+                            <p class="card-text" style="margin-top: 10px">Some quick example text to build on the card
+                                title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary" id="button1">Приобрести</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="{% static 'images/candle.png' %}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-weight: 600">Аромасвеча "Все мои мечты всегда
+                                сбываются"</h5>
+                            <p class="card-text" style="margin-top: 10px">Some quick example text to build on the card
+                                title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary" id="button1">Приобрести</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    {% endblock content %}

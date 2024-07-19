@@ -6,3 +6,6 @@ def index(request):
 
 def products(request):
     return render(request, "main/products.html")
+
+def club(request):
+    return render(request, "main/club.html")

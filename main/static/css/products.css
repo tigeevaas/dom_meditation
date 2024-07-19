@@ -1,0 +1,17 @@
+
+.card {
+    align-items: center;
+    text-align: center;
+}
+
+#button1 {
+    margin-top: 20px;
+    background: #25801D;
+    border-color: #25801D;
+    width: 100%;
+}
+
+#button1:hover {
+    background: #5A9E54;
+    border-color: #5A9E54;
+}

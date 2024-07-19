@@ -1,0 +1,14 @@
+.title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.card-body p {
+    font-weight: 600;
+    line-height: 20px;
+}
