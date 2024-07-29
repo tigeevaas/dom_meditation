@@ -10,7 +10,7 @@
 <div class="container">
     <div class="row h-100 justify-content-center align-items-center">
         <div class="col">
-            <h2 style="margin-top: 20px;">Клуб ежедневной медитации</h2>
+            <h3 style="margin-top: 40px;">Клуб ежедневной медитации</h3>
             <h1 class="title" style="margin-top: 80px">ЧТО ВЫ ПОЛУЧАЕТЕ, ВСТУПИВ В КЛУБ</h1>
         </div>
     </div>
@@ -47,7 +47,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col">
                     <div class="card">
                         <img src="{% static 'images/club-3.png' %}" class="card-img-top" alt="...">
@@ -56,32 +55,24 @@
                         </div>
                     </div>
                 </div>
+                <div style="margin-top: 30px;" class="col">
+                    <p style="font-weight: 600;">Прослушайте фрагмент одной из медитаций клуба</p>
+                    <audio controls="controls">
+                    <source src="track.ogg" type="audio/ogg"/>
+                    <source src="{% static 'music/Picca.mp3' %}" type="audio/mpeg"/>
+                    Your browser does not support the audio element.
+                </audio>
             </div>
+                </div>
         </div>
 
-        <div class="col-1"></div>
+<!--        <div class="col-1"></div>-->
 
         <div class="col-6">
             <img class="img-fluid" src="{% static 'images/nat-2.png' %}">
         </div>
     </div>
 
-    <div class="container">
-        <div class="row h-100 justify-content-center align-items-center">
-            <div class="col">
-                <div class="row">
-                    <div class="col-3">
-                        <p style="font-weight: 600;">Прослушайте фрагмент одной из медитаций клуба</p>
-                    </div>
-                </div>
-                <audio controls="controls">
-                    <source src="track.ogg" type="audio/ogg"/>
-                    <source src="track.mp3" type="audio/mpeg"/>
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        </div>
-    </div>
 
     <div class="container">
         <div class="row h-100 justify-content-center align-items-center">
@@ -92,13 +83,13 @@
         </div>
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-4">
-                <img src="{% static 'images/club-1.jpg' %}">
+                <img src="{% static 'images/otz.png' %}">
             </div>
             <div class="col-4">
-                <img src="{% static 'images/club-1.jpg' %}">
+                <img src="{% static 'images/otz.png' %}">
             </div>
             <div class="col-4">
-                <img src="{% static 'images/club-1.jpg' %}">
+                <img src="{% static 'images/otz.png' %}">
             </div>
         </div>
         <div class="row h-100 justify-content-center align-items-center">

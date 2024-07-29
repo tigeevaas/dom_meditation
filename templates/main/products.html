@@ -10,10 +10,10 @@
 <div class="container">
     <div class="row h-100 justify-content-center align-items-center">
         <div class="col">
-            <h2>Товары</h2>
+            <h3 style="margin-top: 40px;">Товары</h3>
 
             <!--Карточки товаров-->
-            <div class="row">
+            <div class="row" style="margin-top: 40px;">
                 <div class="col-sm-3">
                     <div class="card">
                         <img src="{% static 'images/cards.png' %}" class="card-img-top">
@@ -22,7 +22,7 @@
                                 Ангела-Хранителя"</h5>
                             <p class="card-text" style="margin-top: 10px">Some quick example text to build on the card
                                 title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary" id="button1">Приобрести</a>
+                            <a href="#" style="width: 100%" class="btn btn-success">Приобрести</a>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                                 сбываются"</h5>
                             <p class="card-text" style="margin-top: 10px">Some quick example text to build on the card
                                 title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary" id="button1">Приобрести</a>
+                            <a href="#" style="width: 100%" class="btn btn-success" id="button1">Приобрести</a>
                         </div>
                     </div>
                 </div>
@@ -42,6 +42,7 @@
             </div>
         </div>
     </div>
+</div>
 
 
-    {% endblock content %}
+{% endblock content %}

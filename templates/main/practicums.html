@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block head %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/club.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col">
+            <h3 style="margin-top: 40px;">Практикумы</h3>
+
+            <!--Карточки товаров-->
+
+            <div class="row">
+                {% for practicum in practicums %}
+                <div class="col-4" style="margin-top: 40px;">
+                    <div class="card">
+                        <img src="{{ practicum.image.url }}" class="card-img-top" alt="{{ practicum.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ practicum.name }}</h5>
+                            <p style="font-size: 14px;" class="card-text">{{ practicum.description }}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Продолжительность (в днях) - <strong> {{ practicum.duration }}</strong></li>
+                            <li style="text-decoration: line-through; font-weight: 600" class="list-group-item">{{ practicum.old_price }}
+                                ₽
+                            </li>
+                            <li style="font-weight: 600;" class="list-group-item">{{ practicum.new_price }} ₽</li>
+                        </ul>
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                    <button type="button" style="width: 100%" class="btn btn-outline-success" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
+                                        Подробнее
+                                    </button>
+                                        </div>
+                                </div>
+                                <div class="col" style="margin-top: 15px;">
+                                    <button type="button" style="width: 100%" class="btn btn-success">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {% for practicum in practicums %}
+                <p style="font-weight: 600;">{{ practicum.name }}</p>
+                <p style="white-space:pre-line">{{ practicum.all_description }}</p>
+
+                {% endfor %}
+            </div>
+            <div class="modal-footer">
+                <button type="button" style="width: 100%;" class="btn btn-success">Купить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://auth.robokassa.ru/Merchant/PaymentForm/FormSS.js?EncodedInvoiceId=83RHoPwXbk21mQZ0aNoErA"></script>
+
+
+{% endblock content %}
