@@ -3,3 +3,12 @@
     align-items: center;
     text-align: center;
 }
+.flex-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-cards .card {
+  flex: 1;
+}
+

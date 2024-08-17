@@ -1,0 +1,22 @@
+@media (min-width: 600px) and (max-width: 1199px) {
+    .nav-item a {
+        font-size: 20px;
+    }
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    font-weight: 500;
+    outline: none;
+}
+
+.dropdown-item {
+    font-weight: 500;
+    color: #232d37;
+    font-size: 14px;
+}

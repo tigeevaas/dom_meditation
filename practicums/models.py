@@ -10,10 +10,12 @@ class Practicums(models.Model):
     image = models.ImageField(upload_to='goods_images', blank=True, null=True, verbose_name='Изображение')
     old_price = models.DecimalField(default=0.00, max_digits=7, decimal_places=2, verbose_name='Cтарая цена')
     new_price = models.DecimalField(default=0.00, max_digits=7, decimal_places=2, verbose_name='Новая цена')
-    link = models.TextField(blank=True, null=True, verbose_name='Ссылка на сайт')
+    link = models.TextField(blank=True, null=True, verbose_name='id для модального окна (с #)')
+    id_model = models.TextField(blank=True, null=True, verbose_name='id для модального окна (без #)')
+    link_web = models.TextField(blank=True, null=True, verbose_name='Ссылка на сайт')
 
     class Meta:
-        db_table = 'practicums'
+        db_table = 'practi'
         verbose_name = 'Практикум'
         verbose_name_plural = 'Практикумы'
 

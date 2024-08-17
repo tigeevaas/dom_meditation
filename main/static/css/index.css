@@ -58,6 +58,21 @@
   }
 }
 
+@media (max-width: 1200px) {
+    #info {
+        text-align: center;
+    }
+    .img2 {
+        margin-top: 40px;
+    }
+    h2 {
+        text-align: center;
+    }
+}
+
+
+
+
 
 
 

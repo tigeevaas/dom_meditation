@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% block head %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+<link rel="icon" href="{% static 'images/core-img/favicon.ico' %}">
+
+{% endblock head %}
+
+{% block content %}
+
+
+<!--{% for post in posts %}-->
+<!--<h2>-->
+<!--    <a class="hhh" href="{% url 'blog:post_detail' post.id %}"> {{ post.title }}</a>-->
+<!--</h2>-->
+<!--<p class="date">-->
+<!--    Published {{ post.publish }}-->
+<!--</p>-->
+<!--{{ post.body|truncatewords:30|linebreaks }}-->
+<!--{% endfor %}-->
+
+
+<!-- ****** Welcome Area End ****** -->
+
+<!-- ****** Categories Area Start ****** -->
+<!--    <section class="categories_area clearfix" id="about">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-12 col-md-6 col-lg-4">-->
+<!--                    <div class="single_catagory wow fadeInUp" data-wow-delay=".3s">-->
+<!--                        <img src="img/catagory-img/1.jpg" alt="">-->
+<!--                        <div class="catagory-title">-->
+<!--                            <a href="#">-->
+<!--                                <h5>Food</h5>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-12 col-md-6 col-lg-4">-->
+<!--                    <div class="single_catagory wow fadeInUp" data-wow-delay=".6s">-->
+<!--                        <img src="img/catagory-img/2.jpg" alt="">-->
+<!--                        <div class="catagory-title">-->
+<!--                            <a href="#">-->
+<!--                                <h5>Cooking</h5>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-12 col-md-6 col-lg-4">-->
+<!--                    <div class="single_catagory wow fadeInUp" data-wow-delay=".9s">-->
+<!--                        <img src="img/catagory-img/3.jpg" alt="">-->
+<!--                        <div class="catagory-title">-->
+<!--                            <a href="#">-->
+<!--                                <h5>Life Style</h5>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!-- ****** Categories Area End ****** -->
+
+<!-- ****** Blog Area Start ****** -->
+<section class="blog_area section_padding_0_80">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <h3 style="margin-top: 40px;">Блог</h3>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+                {% for post in posts %}
+
+
+                    <!-- Single Post -->
+                    <div style="margin-top: 30px" class="col-12 col-lg-4">
+                        <div class="single-post wow fadeInUp" id="posts" data-wow-delay=".4s">
+                            <!-- Post Thumb -->
+                            <div class="post-thumb">
+                                <a href="{% url 'blog:post_detail' post.id %}">
+                                    <img src="{{ post.cover.url }}" alt="">
+                                </a>
+                            </div>
+                            <!-- Post Content -->
+                            <div class="post-content">
+                                <div class="post-meta d-flex">
+                                    <div class="post-author-date-area d-flex">
+                                        <!-- Post Author -->
+                                        <div class="post-author">
+                                            <a href="https://t.me/dommeditacii">Натали Сечкина</a>
+                                        </div>
+                                        <!-- Post Date -->
+                                        <div class="post-date">
+                                            <a href="#">{{ post.publish }}</a>
+                                        </div>
+                                    </div>
+                                    <!-- Post Comment & Share Area -->
+                                    <div class="post-comment-share-area d-flex">
+                                        <!-- Post Favourite -->
+                                        <div class="post-favourite">
+                                            <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                        </div>
+                                        <!-- Post Comments -->
+                                        <div class="post-comments">
+                                            <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
+                                        </div>
+                                        <!-- Post Share -->
+                                        <div class="post-share">
+                                            <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="{% url 'blog:post_detail' post.id %}">
+                                    <h4 class="post-headline">{{ post.title }}</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                {% endfor %}
+
+            <!-- ****** Blog Sidebar ****** -->
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                <div class="blog-sidebar mt-5 mt-lg-0">
+                    <!-- Single Widget Area -->
+                    <div class="single-widget-area about-me-widget text-center">
+                        <div class="widget-title">
+                            <h6>Об авторе</h6>
+                        </div>
+                        <div class="about-me-widget-thumb">
+                            <img src="{% static 'images/nat_ph.jpg' %}" alt="">
+                        </div>
+                        <h4 class="font-shadow-into-light">Натали Сечкина</h4>
+                        <p>Мастер медитаций, тренер эмоционального интеллекта. Программирую на счастье. Меняю
+                            мышление.</p>
+                    </div>
+
+                    <!-- Single Widget Area -->
+                    <div class="single-widget-area subscribe_widget text-center">
+                        <div class="widget-title">
+                            <h6>Subscribe &amp; Follow</h6>
+                        </div>
+                        <div class="subscribe-link">
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ****** Blog Area End ****** -->
+
+
+</div>
+<!-- ****** Our Creative Portfolio Area End ****** -->
+
+
+<!-- Jquery-2.2.4 js -->
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="js/bootstrap/popper.min.js"></script>
+<!-- Bootstrap-4 js -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<!-- All Plugins JS -->
+<script src="js/others/plugins.js"></script>
+<!-- Active JS -->
+<script src="js/active.js"></script>
+
+
+{% endblock content %}

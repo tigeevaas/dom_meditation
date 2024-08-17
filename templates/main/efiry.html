@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block head %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/meditations.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col">
+            <h3 style="margin-top: 40px;">Терапевтические эфиры</h3>
+
+            <!--Карточки товаров-->
+
+            <div class="row" style="margin-bottom: 40px">
+                {% for efir in efiry %}
+                <div class="col-lg-3 col-12" style="margin-top: 40px;">
+                    <div class="card">
+                        <img src="{{ efir.image.url }}" class="card-img-top" alt="{{ efir.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-weight: 600; text-transform: uppercase">{{ efir.name }}</h5>
+                            <p style="font-size: 14px; margin-top: 20px;" class="card-text">{{ efir.description }}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Длительность (в часах) - <strong> {{ efir.duration }}</strong></li>
+                            <li style="text-decoration: line-through; font-weight: 600" class="list-group-item">{{ efir.old_price }}
+                                ₽
+                            </li>
+                            <li style="font-weight: 600;" class="list-group-item">{{ efir.new_price }} ₽</li>
+                        </ul>
+                        <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                    <button id="but1" type="button" style="width: 100%; border-color: rgba(37,128,29,0.46)" class="btn btn-light rounded-pill" data-bs-toggle="modal"
+                                            data-bs-target='{{ efir.link }}'>
+                                        Подробнее
+                                    </button>
+                                        </div>
+                                </div>
+                                <div class="col" style="margin-top: 15px;">
+                                    <button id="but2" type="button" style="width: 100%; background-color: #2f8c28; color: white" class="btn rounded-pill">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+
+
+{% for efir in efiry %}
+<div class="modal fade"  id="{{ efir.id_modal }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-fullscreen-xl-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p style="font-weight: 600;">{{ efir.name }}</p>
+                <p style="white-space:pre-line">{{ efir.all_description|safe }}</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" style="width: 100%;" class="btn btn-success">Купить</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+
+
+{% endblock content %}

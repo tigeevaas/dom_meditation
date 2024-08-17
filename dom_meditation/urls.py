@@ -12,9 +12,10 @@ urlpatterns = [
     path("products/", views.products, name='products'),
     path("club/", views.club, name='club'),
     path("practicums/", views.practicums, name='practicums'),
+    path("meditations/", views.meditations, name='meditations'),
+    path('blog/', include('blog.urls', namespace='blog')),
+    path("efiry/", views.efiry, name='efiry'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) if settings.DEBUG else []
-
-
 

@@ -1,0 +1,10 @@
+@media (min-width: 0px) and (max-width: 1199px) {
+    #but1 {
+        height: 80px;
+        text-transform: uppercase;
+    }
+    #but2 {
+        height: 80px;
+        text-transform: uppercase;
+    }
+}
