@@ -3,79 +3,23 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
-<link rel="icon" href="{% static 'images/core-img/favicon.ico' %}">
 
 {% endblock head %}
 
 {% block content %}
 
 
-<!--{% for post in posts %}-->
-<!--<h2>-->
-<!--    <a class="hhh" href="{% url 'blog:post_detail' post.id %}"> {{ post.title }}</a>-->
-<!--</h2>-->
-<!--<p class="date">-->
-<!--    Published {{ post.publish }}-->
-<!--</p>-->
-<!--{{ post.body|truncatewords:30|linebreaks }}-->
-<!--{% endfor %}-->
-
-
-<!-- ****** Welcome Area End ****** -->
-
-<!-- ****** Categories Area Start ****** -->
-<!--    <section class="categories_area clearfix" id="about">-->
-<!--        <div class="container">-->
-<!--            <div class="row">-->
-<!--                <div class="col-12 col-md-6 col-lg-4">-->
-<!--                    <div class="single_catagory wow fadeInUp" data-wow-delay=".3s">-->
-<!--                        <img src="img/catagory-img/1.jpg" alt="">-->
-<!--                        <div class="catagory-title">-->
-<!--                            <a href="#">-->
-<!--                                <h5>Food</h5>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-12 col-md-6 col-lg-4">-->
-<!--                    <div class="single_catagory wow fadeInUp" data-wow-delay=".6s">-->
-<!--                        <img src="img/catagory-img/2.jpg" alt="">-->
-<!--                        <div class="catagory-title">-->
-<!--                            <a href="#">-->
-<!--                                <h5>Cooking</h5>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-12 col-md-6 col-lg-4">-->
-<!--                    <div class="single_catagory wow fadeInUp" data-wow-delay=".9s">-->
-<!--                        <img src="img/catagory-img/3.jpg" alt="">-->
-<!--                        <div class="catagory-title">-->
-<!--                            <a href="#">-->
-<!--                                <h5>Life Style</h5>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-<!-- ****** Categories Area End ****** -->
-
 <!-- ****** Blog Area Start ****** -->
 <section class="blog_area section_padding_0_80">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-lg-8">
-                <h3 style="margin-top: 40px;">Блог</h3>
-            </div>
-        </div>
         <div class="row justify-content-center">
-                {% for post in posts %}
+            <div class="col-12 col-lg-8">
+                <div class="row">
 
 
+                    {% for post in posts %}
                     <!-- Single Post -->
-                    <div style="margin-top: 30px" class="col-12 col-lg-4">
+                    <div style="margin-top: 30px" class="col-12 col-lg-6">
                         <div class="single-post wow fadeInUp" id="posts" data-wow-delay=".4s">
                             <!-- Post Thumb -->
                             <div class="post-thumb">
@@ -120,11 +64,15 @@
                     </div>
 
 
-                {% endfor %}
+                    {% endfor %}
+
+
+                </div>
+            </div>
 
             <!-- ****** Blog Sidebar ****** -->
             <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-                <div class="blog-sidebar mt-5 mt-lg-0">
+                <div class="blog-sidebar">
                     <!-- Single Widget Area -->
                     <div class="single-widget-area about-me-widget text-center">
                         <div class="widget-title">
@@ -141,7 +89,7 @@
                     <!-- Single Widget Area -->
                     <div class="single-widget-area subscribe_widget text-center">
                         <div class="widget-title">
-                            <h6>Subscribe &amp; Follow</h6>
+                            <h6>Подписывайся на <a href="https://t.me/dommeditacii">телеграм канал</a></h6>
                         </div>
                         <div class="subscribe-link">
                             <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -163,7 +111,8 @@
 
 
 </div>
-<!-- ****** Our Creative Portfolio Area End ****** -->
+<!-- ****** Blog Area End ****** -->
+
 
 
 <!-- Jquery-2.2.4 js -->

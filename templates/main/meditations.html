@@ -8,42 +8,36 @@
 {% block content %}
 
 
-<div class="container">
+<div id="test" class="container d-none d-xl-block">
     <div class="row h-100 justify-content-center align-items-center">
         <div class="col">
-            <h3 style="margin-top: 40px;">Практикумы</h3>
+            <h3 style="margin-top: 40px;">Исцеляющие медитации</h3>
 
             <!--Карточки товаров-->
 
             <div class="row" style="margin-bottom: 40px">
                 {% for meditation in meditations %}
-                <div class="col-lg-3 col-12" style="margin-top: 40px;">
+                <div class="col-lg-3 col-0 d-flex" style="margin-top: 40px;">
                     <div class="card">
                         <img src="{{ meditation.image.url }}" class="card-img-top" alt="{{ meditation.name }}">
                         <div class="card-body">
                             <h5 class="card-title" style="font-weight: 600; text-transform: uppercase">{{ meditation.name }}</h5>
-                            <p style="font-size: 14px; margin-top: 20px;" class="card-text">{{ meditation.description }}</p>
+                            <p style="font-size: 14px; white-space:pre-line; margin-top: 20px;" class="card-text">{{ meditation.description }}</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Продолжительность (в днях) - <strong> {{ meditation.duration }}</strong></li>
+                            <li class="list-group-item">Длительность (в минутах) - <strong> {{ meditation.duration }}</strong></li>
                             <li style="text-decoration: line-through; font-weight: 600" class="list-group-item">{{ meditation.old_price }}
                                 ₽
                             </li>
                             <li style="font-weight: 600;" class="list-group-item">{{ meditation.new_price }} ₽</li>
                         </ul>
-                        <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
+                        <div class="card-body d-flex flex-column">
+                            <div class="mt-auto container">
                                     <button id="but1" type="button" style="width: 100%; border-color: rgba(37,128,29,0.46)" class="btn btn-light rounded-pill" data-bs-toggle="modal"
                                             data-bs-target='{{ meditation.link }}'>
                                         Подробнее
                                     </button>
-                                        </div>
-                                </div>
-                                <div class="col" style="margin-top: 15px;">
-                                    <button id="but2" type="button" style="width: 100%; background-color: #2f8c28; color: white" class="btn rounded-pill">Купить</button>
-                                </div>
+                                    <button id="but2" type="button" style="width: 100%; background-color: #2f8c28; color: white; margin-top: 15px;" class="btn rounded-pill">Купить</button>
                             </div>
                         </div>
                     </div>
@@ -54,6 +48,51 @@
         </div>
     </div>
 </div>
+
+
+
+
+<div class="container-fluid d-block d-lg-none">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col">
+            <h3 style="margin-top: 40px;">Практикумы</h3>
+
+            <!--Карточки товаров-->
+
+            <div class="row" style="margin-bottom: 40px">
+                {% for meditation in meditations %}
+                <div class="col-lg-3 d-flex" style="margin-top: 40px;">
+                    <div class="card">
+                        <img src="{{ meditation.image.url }}" class="card-img-top" alt="{{ meditation.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-weight: 600; text-transform: uppercase">{{ meditation.name }}</h5>
+                            <p style="font-size: 14px; white-space:pre-line; margin-top: 20px;" class="card-text">{{ meditation.description }}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Продолжительность (в днях) - <strong> {{ meditation.duration }}</strong></li>
+                            <li style="text-decoration: line-through; font-weight: 600" class="list-group-item">{{ meditation.old_price }}
+                                ₽
+                            </li>
+                            <li style="font-weight: 600;" class="list-group-item">{{ meditation.new_price }} ₽</li>
+                        </ul>
+                        <div class="card-body d-flex flex-column">
+                            <div class="mt-auto container">
+                                    <button id="but3" type="button" style="width: 100%; border-color: rgba(37,128,29,0.46)" class="btn btn-light rounded-pill" data-bs-toggle="modal"
+                                            data-bs-target='{{ meditation.link }}'>
+                                        Подробнее
+                                    </button>
+                                    <button id="but4" type="button" style="width: 100%; background-color: #2f8c28; color: white; margin-top: 15px;" class="btn rounded-pill">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+    </div>
+
 
 
 <!-- Modal -->

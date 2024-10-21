@@ -9,7 +9,7 @@
 {% block content %}
 
 
-<div class="container">
+<div id="test" class="container">
     <div class="row h-100 justify-content-center align-items-center">
         <div class="col">
             <h3 style="margin-top: 40px;">Практикумы</h3>
@@ -18,12 +18,12 @@
 
             <div class="row" style="margin-bottom: 40px">
                 {% for practicum in practicums %}
-                <div class="col-lg-3 col-12 d-flex" style="margin-top: 40px;">
+                <div class="col-lg-3 col-sm-12 d-flex" style="margin-top: 40px;">
                     <div class="card">
                         <img src="{{ practicum.image.url }}" class="card-img-top" alt="{{ practicum.name }}">
                         <div class="card-body">
                             <h5 class="card-title" style="font-weight: 600; text-transform: uppercase">{{ practicum.name }}</h5>
-                            <p style="font-size: 14px; margin-top: 20px;" class="card-text">{{ practicum.description }}</p>
+                            <p style="white-space:pre-line; margin-top: 20px;" class="card-text">{{ practicum.description }}</p>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Продолжительность (в днях) - <strong> {{ practicum.duration }}</strong></li>
@@ -49,6 +49,22 @@
         </div>
     </div>
 </div>
+
+
+
+
+<div class="container-fluid d-block d-lg-none">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col">
+            <h3 style="margin-top: 40px;">Практикумы</h3>
+
+
+
+        </div>
+    </div>
+    </div>
+
+
 
 
 <!-- Modal -->
@@ -77,12 +93,19 @@
 {% endfor %}
 
 
+<!--<a class="btn btn-primary" href="https://api.unisender.com/ru/api/subscribe?format=json&api_key=6jtuanh76kp18ms67tb74d658nb3xx5pt1rccmka&list_ids=985&fields[email]=-->
+<!--tigeeva100@mail.ru&fields[Name]=Ivan+Ivanov&double_optin=3&tags=RusMag" role="button">Link</a>-->
+
+<!--<a class="btn btn-primary" href="https://auth.robokassa.ru/merchant/Invoice/Wc4CDKwUv0KQrSPnDqaFXQ" role="button">Link</a>-->
+
+<!--link = input("введите ссылку")-->
+<!--"""\ <html>-->
+<!--<button><a href={link}>На сайт! </a></button>-->
+<!--</html>-->
+<!--""".format(link=link)-->
 
 
 
-
-
-<!--<script type="text/javascript" src="https://auth.robokassa.ru/Merchant/PaymentForm/FormSS.js?EncodedInvoiceId=83RHoPwXbk21mQZ0aNoErA"></script>-->
 
 
 {% endblock content %}

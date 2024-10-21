@@ -7,7 +7,6 @@ from meditations.models import Meditation
 
 from club.models import Schedule
 
-from reviews.models import Reviews
 
 from efiry.models import Efir
 
@@ -16,6 +15,9 @@ def index(request):
 
 def products(request):
     return render(request, "main/products.html")
+
+def oferta(request):
+    return render(request, "oferta.html")
 
 
 
@@ -42,11 +44,9 @@ def meditations(request):
 def club(request):
 
     schedule = Schedule.objects.all()
-    reviews = Reviews.objects.all()
 
     context = {
         'schedule': schedule,
-        'reviews': reviews,
     }
 
     return render(request, "main/club.html", context)

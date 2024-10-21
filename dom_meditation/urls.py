@@ -15,6 +15,9 @@ urlpatterns = [
     path("meditations/", views.meditations, name='meditations'),
     path('blog/', include('blog.urls', namespace='blog')),
     path("efiry/", views.efiry, name='efiry'),
+    path("oferta/", views.oferta, name='oferta'),
+
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) if settings.DEBUG else []

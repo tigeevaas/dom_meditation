@@ -12,8 +12,27 @@ img {
     font-weight: 600;
     line-height: 20px;
 }
+button:hover {
+    transform: scale(1.04);
+    transition: 1s;
+}
 
+.col-sm-* {
+    padding: 0;
+}
+.col-xs-12 {
+    padding: 0;
+}
 
+@media (min-width: 0px) and (max-width: 1199px) {
 
+    p {
+        text-align: center;
+        margin-top: 40px;
+    }
 
+}
 
+@media (min-width: 1200px) and (max-width: 3000px) {
+
+}

@@ -7,6 +7,48 @@
         height: 80px;
         text-transform: uppercase;
     }
+    #but3 {
+        height: 80px;
+        text-transform: uppercase;
+    }
+    #but4 {
+        height: 80px;
+        text-transform: uppercase;
+    }
+
+    .card-body {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    ul {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .card-title {
+        margin-top: 30px;
+        font-size: 40px;
+        text-align: center;
+    }
 }
+
+@media (min-width: 1201px) and (max-width: 3000px) {
+    p {
+        font-size: 14px;
+    }
+    ul {
+        font-size: 14px;
+    }
+    .card-title {
+        font-size: 20px ;
+    }
+
+}
+
 
 
